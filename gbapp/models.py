@@ -171,8 +171,7 @@ class Question:
                 except:
                     try:
                         useless_va = maps_json['status']
-                        maps_fail = maps_fail + " Aucune correspondance pour "
-                        + my_search_term
+                        maps_fail = maps_fail + " Aucune correspondance pour " + my_search_term
 
                     except:
                         maps_fail = maps_fail + repr(e)
