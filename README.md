@@ -1,6 +1,16 @@
 # P7
 GrandPy Bot
 
+## Installation
+
+Créez un environement virtuel Python:
+
+virtualenv -p python3 env
+
+Ensuite, installez les dépendances en utilisant le fichier "requirements.txt":
+
+pip install -r requirements.txt
+
 ## Trello
 https://trello.com/b/O5cfBlhH/grandpy-bot
 
