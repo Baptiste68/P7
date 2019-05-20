@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/adding_design.css') }}" media="all">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/papy.PNG') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      header, body{
+        color: white;
+      }
+      a {
+        color:yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <div class="col-lg-12">
+          <img src="{{ url_for('static', filename='image/logo.png') }}" alt="OCLogo">
+          Bienvenue sur la page de Granpy bot
+        </div>
+      </header>
+      <div class="row">
+        <section class="col-sm-11">
+          Posez votre/vos question(s)
+          <div class="row">
+            <div id='reponses' class="col-sm-10">
+            </div>
+            <div class="col-sm-1">
+              <div class="row">
+                <aside class="col-sm-12">
+                  <img  src="{{ url_for('static', filename='image/robot.PNG') }}" alt="Robot">
+                </aside>
+                <aside class="col-sm-12">
+                  <img src="{{ url_for('static', filename='image/papy.PNG') }}" alt="Papy">
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="col-sm-10">
+          Entrez votre question.
+          <div class="row">
+            <form id='form' class="col-sm-12" method="post">
+                <input id="input" type=text name="textquestion" />
+                <input type="submit" name="submit" value="Envoyer" />
+            </form>
+          </div>
+        </section>    
+      </div>
+      <footer class="row">
+        <div class="col-lg-12">
+          <p>Baptiste Simon - GitHub : <a href="https://github.com/Baptiste68/P7" target="_blank">Lien</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/question.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=" async defer></script>
+  
+  </body>
+</html>
