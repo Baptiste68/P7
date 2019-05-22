@@ -35,10 +35,9 @@ class TestPage:
         assert page_url == "http://127.0.0.1:5000/"
         assert select == "Bienvenue sur la page de Granpy bot"
 
-    #   - At launch, the body is an empty area with a form to enter question
-    @pytest.mark.skip(reason="no way of currently testing this")
+    #   - At launch, the body is an empty area
     def test_rep_area(self):
-        select = self.browser.find_element_by_id("responses")
+        select = self.browser.find_element_by_xpath("//*[@class='col-sm-10']")
         select = select.text
         assert select == ""
 
@@ -69,13 +68,8 @@ class TestQuest:
     def test_qbuffer(self):
         assert self.question.parse_my_question() == 'paris'
 
-    #   - The question is then display in the free area
-    @pytest.mark.skip(reason="no way of currently testing this")
-    def test_qdisplay():
-        assert hello('toi') == 'toit'
-
     #   - The displaying is auto adapting 
-    @pytest.mark.skip(reason="no way of currently testing this")
+    @pytest.mark.skip(reason="to be check manualy")
     def test_adapting():
         assert hello('toi') == 'toit'
 
@@ -88,9 +82,6 @@ class TestQuest:
 class TestAnswer():
 #-- Answer management 
 #   - API connection 
-    @pytest.mark.skip(reason="no way of currently testing this")
-    def test_api_co():
-        assert hello('toi') == 'toit'
 
     #   - Correct adress field return Maps API     
     def test_maps_return(self, monkeypatch):
@@ -135,11 +126,6 @@ class TestAnswer():
 
         assert json.loads(result)['error_message'] in my_quest.maps_info()
 
-
-#   - The story of GranPy is displayed 
-    @pytest.mark.skip(reason="no way of currently testing this")
-    def test_stories():
-        assert hello('toi') == 'toit'
 
 #   - Correct link
     def test_link(self, monkeypatch):
